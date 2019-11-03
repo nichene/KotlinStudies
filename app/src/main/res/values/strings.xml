@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ProjectoAula2</string>
+    <string name="registro">Registro</string>
+
+    <string name="login">Login</string>
+    <string name="Password">Password</string>
+
+    <string name="name">Nome</string>
+    <string name="cpf">CPF</string>
+
+    <string name="enter">Entrar</string>
+    <string name="Cancel">Cancelar</string>
+
+    <string name="yourCpf">O seu CPF é: </string>
+    <string name="yourName">O seu nome é: </string>
+
+    <string name="yourLogin">O seu Login é: </string>
+    <string name="yourPassword">A sua senha é: </string>
+</resources>
