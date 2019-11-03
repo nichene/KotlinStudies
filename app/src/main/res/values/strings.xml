@@ -14,6 +14,6 @@
     <string name="yourCpf">O seu CPF é: </string>
     <string name="yourName">O seu nome é: </string>
 
-    <string name="yourLogin">O seu Login é: </string>
+    <string name="yourLogin">O seu login é: </string>
     <string name="yourPassword">A sua senha é: </string>
 </resources>

@@ -28,8 +28,7 @@ class Register : AppCompatActivity() {
         }
 
         buttonCancelRegister.setOnClickListener {
-            val intentCancel = Intent(this, MainActivity::class.java)
-            startActivity(intentCancel)
+            finish()
         }
 
 

@@ -29,8 +29,7 @@ class Login : AppCompatActivity() {
         }
 
         buttonCancelLogin.setOnClickListener {
-            val intentCancel = Intent(this, MainActivity::class.java)
-            startActivity(intentCancel)
+            finish()
         }
 
     }
