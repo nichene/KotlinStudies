@@ -19,12 +19,13 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="60dp"
         android:background="@color/white"
-        android:hint="@string/login" />
+        android:hint="@string/name" />
     <EditText
         android:id="@+id/edt_password_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/Password"
+        android:inputType="textPassword"
         android:background="@color/white"
         android:layout_margin="20dp"
         />

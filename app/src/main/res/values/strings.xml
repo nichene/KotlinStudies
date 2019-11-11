@@ -2,8 +2,8 @@
     <string name="app_name">ProjectoAula2</string>
     <string name="registro">Registro</string>
 
-    <string name="login">Login</string>
-    <string name="Password">Password</string>
+    <string name="email">Email</string>
+    <string name="Password">Senha</string>
 
     <string name="name">Nome</string>
     <string name="cpf">CPF</string>
@@ -16,4 +16,16 @@
 
     <string name="yourLogin">O seu login é: </string>
     <string name="yourPassword">A sua senha é: </string>
+
+    <string name="dialogTitle">Adicione as Informações do seu novo card: </string>
+    <string name="title">Título</string>
+    <string name="subTitle">SubTitulo</string>
+
+    <string name="ok">Ok</string>
+
+    <string name="notRegistered">Este usuário não está cadastrado</string>
+    <string name="notFilledOut">Os campos devem ser preenchidos</string>
+    <string name="status">Feito: </string>
+    <string name="Not">Não</string>
+
 </resources>
