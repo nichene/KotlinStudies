@@ -3,7 +3,11 @@ package com.example.nichenejvercosa.projectoaula
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.widget.Button
+import android.view.MenuInflater
+import android.view.MenuItem
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,4 +31,6 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
 }

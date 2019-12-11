@@ -1,11 +1,17 @@
 package com.example.nichenejvercosa.projectoaula
 
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.nichenejvercosa.projectoaula.R.string.email
+import android.text.Editable
+import android.text.TextWatcher
+
+
 
 class Register : AppCompatActivity() {
 
@@ -20,16 +26,16 @@ class Register : AppCompatActivity() {
         val buttonEnterRegister = findViewById<Button>(R.id.btn_enter_register)
         val buttonCancelRegister = findViewById<Button>(R.id.btn_cancel_register)
 
-        val sharedPref = getSharedPreferences("MyPrefs", 0)
-        val sharedPrefEditor = sharedPref.edit()
+        checkEmail(this)
+
+        val db = MyDatabase(baseContext);
 
 
         buttonEnterRegister.setOnClickListener {
 
             if(edtName.text.toString() != "" && edtPass.text.toString() != ""){
-                sharedPrefEditor.putString("USERNAME", edtName.text.toString())
-                sharedPrefEditor.putString("USERPASS", edtPass.text.toString())
-                sharedPrefEditor.apply()
+
+                db.insertUser(edtName.text.toString(), edtPass.text.toString())
 
                 val intentEnterActivityList = Intent(this, ActivityList::class.java)
 
@@ -46,6 +52,48 @@ class Register : AppCompatActivity() {
             finish()
         }
 
+
+    }
+
+    private fun checkEmail(context: Context) {
+
+        var email = findViewById<EditText>(R.id.edt_email_register)
+
+        email.addTextChangedListener(object : TextWatcher {
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int,
+                                       count: Int) {
+
+            }
+
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int,
+                                           after: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable) {
+                Is_Valid_Email(email)
+            }
+
+            fun Is_Valid_Email(edt: EditText) {
+                var validEmail : String
+
+                if (edt.text.toString() == null) {
+                    Toast.makeText(context, "Invalid Email Address", Toast.LENGTH_SHORT).show()
+
+                } else if (isEmailValid(edt.text.toString()) == false) {
+                    Toast.makeText(context, "Invalid Email Address", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(context, "Valid Email Address", Toast.LENGTH_SHORT).show()
+                    validEmail = edt.text.toString()
+                }
+            }
+
+            internal fun isEmailValid(email: CharSequence): Boolean {
+                return android.util.Patterns.EMAIL_ADDRESS.matcher(email)
+                        .matches()
+            } // end of TextWatcher (email)
+        })
 
     }
 }

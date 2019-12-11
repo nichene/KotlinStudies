@@ -1,6 +1,7 @@
 package com.example.nichenejvercosa.projectoaula
 
 import android.content.DialogInterface
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
@@ -9,6 +10,8 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -24,8 +27,7 @@ class ActivityList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
 
-        val sharedPref = getSharedPreferences("MyPrefs", 0)
-        val userName = sharedPref.getString("USERNAME", "")
+        var userName = intent.getStringExtra("UserName")
 
         var userMessage = "Olá ${userName}! =)"
 
@@ -64,6 +66,32 @@ class ActivityList : AppCompatActivity() {
 
 
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection
+        when (item.getItemId()) {
+            R.id.distracao -> {
+                goToDistractionActivity()
+                return true
+            }
+            R.id.activityList -> {
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun goToDistractionActivity(){
+        val intentEnterDistraction = Intent(this, DistractionActivity::class.java)
+        startActivity(intentEnterDistraction)
     }
 
 
