@@ -20,6 +20,8 @@
         <activity android:name=".Login" />
         <activity android:name=".ActivityList" />
         <activity android:name=".DistractionActivity"></activity>
+
+        <receiver android:name=".AlarmReceiver"></receiver>
     </application>
 
 </manifest>
