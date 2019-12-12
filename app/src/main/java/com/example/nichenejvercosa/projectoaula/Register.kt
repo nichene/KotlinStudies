@@ -38,8 +38,9 @@ class Register : AppCompatActivity() {
                 db.insertUser(edtName.text.toString(), edtPass.text.toString())
 
                 val intentEnterActivityList = Intent(this, ActivityList::class.java)
-
+                intentEnterActivityList.putExtra("UserName", edtName.text.toString())
                 startActivity(intentEnterActivityList)
+
             }else{
                 Toast.makeText(this, R.string.notFilledOut, Toast.LENGTH_SHORT).show()
             }
