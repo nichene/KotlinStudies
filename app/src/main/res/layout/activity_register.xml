@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/antiquePink"
+    android:background="@color/gray"
     >
 
 
@@ -19,7 +19,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="60dp"
         android:background="@color/white"
-        android:hint="@string/name" />
+        android:hint="@string/name"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        />
     <EditText
         android:id="@+id/edt_cpf_register"
         android:layout_width="match_parent"
@@ -43,7 +45,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/Password"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         android:inputType="textPassword"
         android:background="@color/white"
         android:layout_margin="20dp"
@@ -57,7 +58,7 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:padding = "20dp"
-        android:background="@color/antiquePink"
+        android:background="@color/gray"
         >
 
         <Button
@@ -66,7 +67,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/Cancel"
-            android:backgroundTint="@color/lightSeaGreen"
             android:textColor="@color/white"
             />
 
@@ -76,7 +76,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/enter"
-            android:backgroundTint="@color/lightSeaGreen"
             android:textColor="@color/white"
             />
 

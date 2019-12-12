@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/antiquePink"
+    android:background="@color/gray"
     >
 
 
     <ImageView
         android:id="@+id/img_activity_main"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/ic_account_box_black_24dp"
-        android:layout_marginTop="120dp"
-        android:background="@color/antiquePink"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/s0025v1962"
+        android:background="@color/gray" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_marginTop="370dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#00ffffff"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        />
 
 
     <Button
@@ -25,22 +32,23 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="450dp"
+        android:padding="10dp"
         android:text="@string/registro"
-        android:backgroundTint="@color/lightSeaGreen"
         android:textColor="@color/white"
-        />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="500dp"
         android:text="@string/enter"
-        android:backgroundTint="@color/lightSeaGreen"
         android:textColor="@color/white"
+        android:textStyle="bold"
         />
 
 
-</LinearLayout>
+
+</FrameLayout>

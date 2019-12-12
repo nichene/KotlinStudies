@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/antiquePink"
+    android:background="@color/gray"
     tools:context=".ActivityList">
 
     <TextView
         android:id="@+id/txt_activityList"
-        android:background="@color/antiquePink"
+        android:background="@color/gray"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -33,7 +33,7 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/reclycle_view_activityList"
-        android:backgroundTint="@color/antiquePink"
+        android:background="@color/gray"
         android:layout_width="379dp"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
